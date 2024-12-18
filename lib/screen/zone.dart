@@ -23,12 +23,9 @@ class _ZoneScreenState extends State<ZoneScreen> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * .32,
+                  height: MediaQuery.of(context).size.height * .25,
                   width: double.infinity,
-                  color: isTablet
-                      ? const Color(0xFFF3B63F)
-                      : Colors
-                          .transparent,  
+                 
                   child: Column(
                     children: [
                       // MAIN COLUMN
@@ -59,7 +56,7 @@ class _ZoneScreenState extends State<ZoneScreen> {
                       ),
 
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * .09,
+                        height: MediaQuery.of(context).size.height * .08,
                       ),
 
                       Column(
@@ -146,87 +143,126 @@ class _ZoneScreenState extends State<ZoneScreen> {
                   ),
                 ),
               ),
+
+              
+              
+
               Positioned(
-                right: 8,
-                top: 65,
+                right: screenHeight*0.0,
+                // top: screenHeight*0.02,
                 child: Container(
-                  height: 200,
-                  width: 200,
+                  // color: color1,
+                  width: screenHeight*0.32,
+                  height: screenHeight*0.32,
                   decoration: BoxDecoration(
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/1.jpg'),
-                          fit: BoxFit.cover),
-                      color: profile,
-                      borderRadius: BorderRadius.circular(555)),
-                ),
-              ),
-              Positioned(
-                right: 45,
-                top: 100,
-                child: Container(
-                  height: 130,
-                  width: 130,
-                  decoration: BoxDecoration(
-                      //       image: DecorationImage(
-                      // image: AssetImage('assets/images/1.jpg'),fit: BoxFit.cover
-                      //       ),
-                      color: profile,
-                      borderRadius: BorderRadius.circular(522)),
-                ),
-              ),
-              Positioned(
-                right: 8,
-                top: 8,
-                child: Container(
-                    height: 258,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5500),
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/3.png'),
-                          fit: BoxFit.fill),
-                    )),
-              ),
-              Positioned(
-                top: isTablet
-                    ? screenHeight * 0.3
-                    : screenHeight *
-                        0.3,  
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          "OFFERS",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          width: isTablet
-                              ? screenHeight * .4
-                              : screenHeight * 0.25,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "1 of 82 completed",
-                              style: TextStyle(color: TextColor2),
-                            ),
-                          ],
-                        )
-                      ],
+                    borderRadius: BorderRadius.circular(550),
+                    // color: const Color.fromARGB(26, 25, 23, 23),
+                  ),
+                  
+                  child: Stack(children: [
+                  
+                   Positioned(
+                     left:screenHeight*0.07,
+                    right: screenHeight*0.02,
+                     top: screenHeight*0.05,
+                     bottom: screenHeight*0.05,
+                   
+                    child: Container(
+                  //      width: screenHeight*0.28,
+                  // height: screenHeight*0.28,
+                      decoration: BoxDecoration(
+                          image: const DecorationImage(
+                              image: AssetImage('assets/images/1.jpg'),
+                              fit: BoxFit.cover),
+                          color: profile,
+                          borderRadius: BorderRadius.circular(555)),
                     ),
+                  ),
+                  Positioned(
+                     left:screenHeight*0.10,
+                    right: screenHeight*0.06,
+                     top: screenHeight*0.08,
+                     bottom: screenHeight*0.08,
+                    
+                    child: Container(
+                        width: screenHeight*0.18,
+                  height: screenHeight*0.18,
+
+                      decoration: BoxDecoration(
+                          //       image: DecorationImage(
+                          // image: AssetImage('assets/images/1.jpg'),fit: BoxFit.cover
+                          //       ),
+                          color: profile,
+                          borderRadius: BorderRadius.circular(522)
+                          
+                          ),
+                    ),
+                  ),
+                  Positioned(
+                    left:screenHeight*0.07,
+                    right: screenHeight*0.03,
+                     top: screenHeight*0.0,
+                     bottom: screenHeight*0.05,
+
+                    child: Container(
+                      width: screenHeight*0.35,
+                  height: screenHeight*0.35,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only( bottomLeft: Radius.circular(300),  // Bottom-left corner
+                bottomRight: Radius.circular(300),),
+                          image: const DecorationImage(
+                              image: AssetImage('assets/images/3.png'),
+                              fit: BoxFit.fill
+                              
+                              
+                              ),
+                        )),
+                  ),
+
+                
+                  
+                  
+                  
+                  
+                    
+                  ],
+                  
+                  
+                  
+                  
+                  
                   ),
                 ),
               ),
             ],
           ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Container(
+                // width:screenHeight*0.4,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "OFFERS",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                          "1 of 82 completed",
+                          style: TextStyle(color: TextColor2),
+                        ),
+                   
+                     
+                  ],
+                ),
+              ),
+            ),
+          SizedBox(height: screenHeight*0.01 ,),
           Container(
-              height: MediaQuery.of(context).size.height * .15,
+              height: screenHeight*0.20,
               width: double.infinity,
               
               child: ListView.builder(
@@ -236,8 +272,8 @@ class _ZoneScreenState extends State<ZoneScreen> {
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
-                      width: screenHeight * 0.20,
-                      height: 0,
+                      width: screenHeight * 0.219,
+                      height: screenHeight*0.1,
                       decoration: BoxDecoration(
                           color: listback,
                           borderRadius: BorderRadius.circular(20)),
@@ -254,18 +290,18 @@ class _ZoneScreenState extends State<ZoneScreen> {
                                   "BOOK VENUE",
                                   style: TextStyle(
                                       color: listtext1,
-                                      fontSize: 19,
+                                      fontSize: screenHeight*0.02,
                                       fontWeight: FontWeight.w900),
                                 )
                               ],
                             ),
                             const SizedBox(
-                              height: 1,
+                              height: 0,
                             ),
-                            const Row(
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(
+                                const Expanded(
                                   child: Divider(
                                     color: Color.fromARGB(255, 57, 55, 50),
                                     thickness: 2,
@@ -274,14 +310,14 @@ class _ZoneScreenState extends State<ZoneScreen> {
                                 ),
                                 Stack(
                                   children: [
-                                    CircularProgressIndicator(
+                                    const CircularProgressIndicator(
                                       color: Colors.red,
                                       strokeWidth: 4.0,
                                     ),
                                     Icon(
                                       Icons.man,
                                       color: Colors.white,
-                                      size: 35,
+                                      size: screenHeight*0.05,
                                     ),
                                   ],
                                 ),
@@ -289,9 +325,8 @@ class _ZoneScreenState extends State<ZoneScreen> {
                                
                               ],
                             ),
-                            const SizedBox(
-                              height: 1,
-                            ),
+                            // SizedBox(height: 25,),
+                            
                             const Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -300,7 +335,7 @@ class _ZoneScreenState extends State<ZoneScreen> {
                                     Icon(
                                       Icons.sports_cricket,
                                       color: Colors.amber,
-                                      size: 25,
+                                      size: 22,
                                     )
                                   ],
                                 ),
