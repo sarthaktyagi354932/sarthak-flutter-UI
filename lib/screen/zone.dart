@@ -312,13 +312,14 @@ class _ZoneScreenState extends State<ZoneScreen> {
                                   children: [
                                     const CircularProgressIndicator(
                                       color: Colors.red,
+                                      value: 0.75,
                                       strokeWidth: 4.0,
                                     ),
-                                    Icon(
-                                      Icons.man,
-                                      color: Colors.white,
-                                      size: screenHeight*0.05,
-                                    ),
+                                    // Icon(
+                                    //   Icons.man,
+                                    //   color: Colors.white,
+                                    //   size: screenHeight*0.05,
+                                    // ),
                                   ],
                                 ),
 
