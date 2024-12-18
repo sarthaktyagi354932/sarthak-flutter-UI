@@ -199,17 +199,17 @@ class _ZoneScreenState extends State<ZoneScreen> {
                     ),
                   ),
                   Positioned(
-                    left:screenHeight*0.07,
-                    right: screenHeight*0.03,
+                    left:screenHeight*0.078,
+                    right: screenHeight*0.029,
                      top: screenHeight*0.0,
-                     bottom: screenHeight*0.05,
+                     bottom: screenHeight*0.046,
 
                     child: Container(
                       width: screenHeight*0.35,
                   height: screenHeight*0.35,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only( bottomLeft: Radius.circular(300),  // Bottom-left corner
-                bottomRight: Radius.circular(300),),
+                bottomRight: Radius.circular(285),),
                           image: const DecorationImage(
                               image: AssetImage('assets/images/3.png'),
                               fit: BoxFit.fill
